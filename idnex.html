@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>my project</title>
+  <link rel="stylesheet" href="CSS/common.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_956951_90baul1hs7b.css">
+  <style>
+    html,
+    body{
+      height: 100%;
+    }
+    header{
+      position: relative;
+      height: 100%;
+      min-height: 600px;
+      background: #000 url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544860500&di=8ffeaa3f507a5acf29496eb70deafbc9&imgtype=jpg&er=1&src=http%3A%2F%2Fbbs-static.smartisan.cn%2Fdata%2Fattachment%2Fforum%2F201512%2F30%2F150239buuce8cau98y9wou.jpg)
+      center center no-repeat;
+      background-size: cover;
+    }
+    header .navbar{
+      padding-top: 30px;
+      /* padding-left: 10px; */
+    }
+    header .logo{
+      color:#f7ba3e;
+      font-size: 32px;
+      float: left;
+    }
+    header .nav{
+      float: right;
+    }
+    header .nav>li{
+      float: left;
+      margin: 10px;
+    }
+
+    header .nav a{
+      display: inline-block;
+      padding: 5px;
+      color:#fff;
+      font-size: 16px;
+    }
+    header .nav a:hover{
+      color:#f7ba3e;
+    }
+
+    header .head-intro{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+    header .head-intro h1{
+      font-size: 40px;
+    }
+    header .head-intro h2{
+      font-size: 50px;
+      margin-top: 30px;
+    }
+    header .head-intro .btn{
+      margin-top: 30px;
+      padding: 20px;
+    }
+    section{
+      text-align: center;
+      margin-top: 100px;
+    }
+    section h2{
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    section .iconfont>h3{
+      display: inline-block;
+      font-size: 30px;
+
+    }
+    section .services-list p{
+      font-size: 14px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    section .services-list>li{
+      float: left;
+      width: 33.33%;
+      padding: 10px, 20px;
+    }
+    section>ul .iconfont{
+      display: inline-block;
+      margin-top: 60px;
+      font-size: 60px;
+    }
+    section .PORTFOLIO-intro figure{
+      background-color: beige;
+      width: calc(33.33% - 20px);
+      margin: 10px;
+      height: 260px;
+      float: left;
+    }
+    section .PORTFOLIO-intro a{
+      display: block;
+      height: 200px;
+    }
+    section .PORTFOLIO-intro img{
+      width: 100%;
+      height: 100%;
+    }
+    section .PORTFOLIO-intro figcaption{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    section .PORTFOLIO-intro p{
+      font-size: 18px;
+    }
+    section .line ul{
+      position: relative;
+    }
+    section .line img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border:5px solid lightgray;
+    }
+    
+    section .line>li{
+      margin-top: 100px;
+      position: relative;
+    }
+    section .line>li:last-child::before{
+      height: 0px;
+    }
+    section .line>li:nth-child(odd){
+      padding-right: calc(50% - 50px);
+      text-align: right;
+    }
+    section .line>li:nth-child(odd) img{
+      float: right;
+    }
+    section .line>li:nth-child(odd) dl{
+      margin-right: 120px;
+    }
+
+    section .line>li:nth-child(even){
+      padding-left: calc(50% - 50px);
+      text-align: left;
+    }
+    section .line>li:nth-child(even) img{
+      float: left;
+    }
+    section .line>li:nth-child(even) dl{
+      margin-left: 120px;
+    }
+    section .line dt{
+      font-size: 24px;
+      font-weight: bold;
+    }
+    section .line dd:nth-child(2){
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    section .line dd:nth-of-type(2){
+      font-size: 16px;
+    }
+
+    section .line>li::before{
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      content: '';
+      display: inline-block;
+      height: 200px;
+      width: 2px;
+      background-color: lightgray;
+      
+    }
+    section .line .end-img{
+      display: inline-block;
+      color: #fff;
+      background-color: #f7ba3e;
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      border: 3px solid lightgray;
+    }
+    section .line .end-img h4{
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 16px;
+
+    }
+    footer{
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    footer form{
+      margin-top:50px;
+    }
+    .textleft{
+      font-size: 50px;
+      width: 50%;
+      float: left;
+    }
+    .textleft input{
+      float: right;
+      margin-right: 50px;
+    }
+    .textright{
+      font-size: 50px;
+      width: 50%;
+      float: right;
+    }
+    .textright input{
+      float: left;
+      margin-left: 50px;
+    }
+    .text{
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      width: 80%;
+      margin-top: 30px;
+    }
+    footer .btn{
+      display: inline-block;
+      margin: 0 auto;
+      margin-top: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar layout clearfix">
+      <a href="#" class="logo">Start Project</a>
+      <ul class="nav">
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">CONTENT</a></li>
+      </ul>
+    </div>
+    <div class="head-intro">
+      <h1>Welcome To Our Studio!</h1>
+      <h2>IT'S NICE TO MEET YOU</h2>
+      <a href="#" class="btn">TELL ME MORE</a>
+    </div>
+  </header>
+  <main class="layout">
+    <section>
+      <h2>SERVICES</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <ul class="services-list clearfix">
+        <li>
+          <span class="iconfont icon-shujukanban"></span>
+          <h3>E-Commerce</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </li>
+        <li>
+          <span class="iconfont icon-zuzhiqunzu"></span>
+          <h3>Responsive Design</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </li>
+        <li>
+          <span class="iconfont icon-zhanghaoquanxianguanli"></span>
+          <h3>Web Security</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>PORTFOLIO</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <div class="PORTFOLIO-intro clearfix">
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Round Icons</figcaption>
+          <p>Graphic Design</p>
+        </figure>
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Startup Framework</figcaption>
+          <p>Website Design</p>
+        </figure>
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Treehouse</figcaption>
+          <p>Website Design</p>
+        </figure>
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Golden</figcaption>
+          <p>Website Design</p>
+        </figure>
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Escape</figcaption>
+          <p>Website Design</p>
+        </figure>
+        <figure>
+          <a href="#"><img src="https://tse2-mm.cn.bing.net/th?id=OIP.lMO_2JRXyPf4lkDeueym2AAAAA&w=212&h=145&c=7&o=5&dpr=1.5625&pid=1.7" alt=""></a>
+          <figcaption>Dreams</figcaption>
+          <p>Website Design</p>
+        </figure>
+      </div>
+    </section>
+    <section>
+      <h2>ABOUT</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+      <ul class="line">
+        <li class="clearfix">
+          <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/1.jpg" alt="">
+          <dl>
+            <dt>2009-2011</dt>
+            <dd>Our Humble Beginnings</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+          </dl>
+        </li>
+        <li class="clearfix">
+          <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/2.jpg" alt="">
+          <dl>
+            <dt>JULY 2014</dt>
+            <dd>Phase Two Expansion</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+          </dl>
+        </li>
+        <li class="clearfix">
+          <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/3.jpg" alt="">
+          <dl>
+            <dt>MARCH 2011</dt>
+            <dd>An Agency is Born</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+          </dl>
+        </li>
+        <li class="clearfix">
+          <img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/about/4.jpg" alt="">
+          <dl>
+            <dt>DECEMBER 2012</dt>
+            <dd>Transition to Full Service</dd>
+            <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</dd>
+          </dl>
+        </li>
+        <li>
+          <div class="end-img">
+            <h4>BE PART OF OUR STORY!</h4>
+          </div>
+        </li>
+      </ul>
+      
+    </section>
+    <section>
+      <h2>CONTACT US</h2>
+      <p>Lorem ipsum dolor sit amet consectetur.</p>
+     
+    </section>
+  </main>
+  <footer>
+    <form class="clearfix" action="#" method="POST">
+      <div class="textleft">
+        <input class="text" style="height:80px" id="username" type="text" placeholder="YOUR NAME*" name="username">
+        <input class="text" style="height:80px" id="useremail" type="text" placeholder="YOUR EMAIL*" name="useremail">
+        <input class="text" style="height:80px" id="userphone" type="text" placeholder="YOUR PHONE*" name="userphone">
+      </div>
+      <div class="textright">
+        <input class="text" style="height:300px" type="textarea" id="usermessage" placeholder="YOUR MESSAGE*" name="yourmessage">
+      </div>
+    </form>
+    <a href="#" class="btn">SEND MESSAGE</a>
+  </footer>
+</body>
+</html>
